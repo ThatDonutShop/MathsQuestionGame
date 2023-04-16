@@ -1,23 +1,22 @@
 using MathGame.Core;
+using System.Windows.Forms;
 
 namespace MathGame.WindowsForm
 {
     public partial class MathsGameForm : Form
     {
         private readonly Game _game;
-        private Question _currentQuestion;
 
         public MathsGameForm()
         {
             _game = new Game();
-            _currentQuestion = _game.AskForNewQuestion();
-
             InitializeComponent();
+            Guess.Text = string.Empty;
         }
 
         private void LoadGame(object sender, EventArgs e)
         {
-            ShowQuestion(_currentQuestion);
+            ShowQuestion(_game.AskForNewQuestion());
         }
 
         private void ShowQuestion(Question question)
@@ -35,18 +34,23 @@ namespace MathGame.WindowsForm
 
         private void SubmitAnswer_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(tbxAnswer.Text, out int guess))
+            if (string.IsNullOrWhiteSpace(Guess.Text))
             {
-                if (_game.AttemptGuess(guess))
+                MessageBox.Show("You must enter a actual guess.", "Invalid guess");
+            }
+            else
+            {
+                if (_game.AttemptGuess(int.Parse(Guess.Text)))
                 {
                     MessageBox.Show("You answered that correctly.", "Question answered");
                 }
 
+                Guess.Text = string.Empty;
                 AttemptsMade.Text = _game.Attempts.ToString();
-            }
+                CorrectlyAnswered.Text = _game.CorrectlyGuessed.ToString();
 
-            _currentQuestion = _game.AskForNewQuestion();
-            ShowQuestion(_currentQuestion);
+                ShowQuestion(_game.AskForNewQuestion());
+            }
         }
     }
 }

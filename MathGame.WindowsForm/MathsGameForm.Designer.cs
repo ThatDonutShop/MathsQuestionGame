@@ -31,7 +31,6 @@
             lblAnsweredCorrect = new Label();
             lblAttempts = new Label();
             SubmitAnswer = new Button();
-            tbxAnswer = new TextBox();
             label5 = new Label();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -45,9 +44,12 @@
             label1 = new Label();
             btnGenQuestion = new Button();
             AttemptsMade = new Label();
+            CorrectlyAnswered = new Label();
+            Guess = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Guess).BeginInit();
             SuspendLayout();
             // 
             // lblAnsweredCorrect
@@ -62,7 +64,7 @@
             // lblAttempts
             // 
             lblAttempts.AutoSize = true;
-            lblAttempts.Location = new Point(42, 410);
+            lblAttempts.Location = new Point(42, 412);
             lblAttempts.Name = "lblAttempts";
             lblAttempts.Size = new Size(59, 15);
             lblAttempts.TabIndex = 46;
@@ -78,13 +80,6 @@
             SubmitAnswer.Text = "Submit";
             SubmitAnswer.UseVisualStyleBackColor = true;
             SubmitAnswer.Click += SubmitAnswer_Click;
-            // 
-            // tbxAnswer
-            // 
-            tbxAnswer.Location = new Point(254, 312);
-            tbxAnswer.Name = "tbxAnswer";
-            tbxAnswer.Size = new Size(91, 23);
-            tbxAnswer.TabIndex = 44;
             // 
             // label5
             // 
@@ -204,21 +199,38 @@
             // AttemptsMade
             // 
             AttemptsMade.AutoSize = true;
-            AttemptsMade.Location = new Point(105, 410);
+            AttemptsMade.Location = new Point(107, 410);
             AttemptsMade.Name = "AttemptsMade";
             AttemptsMade.Size = new Size(0, 15);
             AttemptsMade.TabIndex = 48;
             // 
-            // mathsGame
+            // CorrectlyAnswered
+            // 
+            CorrectlyAnswered.AutoSize = true;
+            CorrectlyAnswered.Location = new Point(161, 435);
+            CorrectlyAnswered.Name = "CorrectlyAnswered";
+            CorrectlyAnswered.Size = new Size(0, 15);
+            CorrectlyAnswered.TabIndex = 49;
+            // 
+            // Guess
+            // 
+            Guess.Location = new Point(247, 315);
+            Guess.Maximum = new decimal(new int[] { 110, 0, 0, 0 });
+            Guess.Name = "Guess";
+            Guess.Size = new Size(49, 23);
+            Guess.TabIndex = 50;
+            // 
+            // MathsGameForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(469, 553);
+            Controls.Add(Guess);
+            Controls.Add(CorrectlyAnswered);
             Controls.Add(AttemptsMade);
             Controls.Add(lblAnsweredCorrect);
             Controls.Add(lblAttempts);
             Controls.Add(SubmitAnswer);
-            Controls.Add(tbxAnswer);
             Controls.Add(label5);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
@@ -231,12 +243,13 @@
             Controls.Add(lblNum1);
             Controls.Add(label1);
             Controls.Add(btnGenQuestion);
-            Name = "mathsGame";
+            Name = "MathsGameForm";
             Text = "Maths Game";
             Load += LoadGame;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Guess).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -246,7 +259,6 @@
         private Label lblAnsweredCorrect;
         private Label lblAttempts;
         private Button SubmitAnswer;
-        private TextBox tbxAnswer;
         private Label label5;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
@@ -260,5 +272,7 @@
         private Label label1;
         private Button btnGenQuestion;
         private Label AttemptsMade;
+        private Label CorrectlyAnswered;
+        private NumericUpDown Guess;
     }
 }
