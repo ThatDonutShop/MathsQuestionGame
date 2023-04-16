@@ -1,5 +1,4 @@
 using MathGame.Core;
-using System.Windows.Forms;
 
 namespace MathGame.WindowsForm
 {
