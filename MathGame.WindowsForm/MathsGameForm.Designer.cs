@@ -120,7 +120,7 @@
             // CorrectlyAnswered
             // 
             CorrectlyAnswered.AutoSize = true;
-            CorrectlyAnswered.Location = new Point(172, 380);
+            CorrectlyAnswered.Location = new Point(166, 380);
             CorrectlyAnswered.Name = "CorrectlyAnswered";
             CorrectlyAnswered.Size = new Size(0, 15);
             CorrectlyAnswered.TabIndex = 49;
