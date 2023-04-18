@@ -73,7 +73,7 @@
             // SubmitAnswer
             // 
             SubmitAnswer.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            SubmitAnswer.Location = new Point(80, 358);
+            SubmitAnswer.Location = new Point(78, 353);
             SubmitAnswer.Name = "SubmitAnswer";
             SubmitAnswer.Size = new Size(173, 31);
             SubmitAnswer.TabIndex = 45;
