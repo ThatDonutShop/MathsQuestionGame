@@ -127,7 +127,7 @@
             // 
             // Guess
             // 
-            Guess.Location = new Point(166, 284);
+            Guess.Location = new Point(166, 282);
             Guess.Maximum = new decimal(new int[] { 110, 0, 0, 0 });
             Guess.Name = "Guess";
             Guess.Size = new Size(49, 23);
