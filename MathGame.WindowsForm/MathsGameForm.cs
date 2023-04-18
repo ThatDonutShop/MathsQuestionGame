@@ -6,9 +6,9 @@ namespace MathGame.WindowsForm
     {
         private readonly Game _game;
 
-        public MathsGameForm()
+        public MathsGameForm(Game game)
         {
-            _game = new Game();
+            _game = game;
             InitializeComponent();
             Guess.Text = string.Empty;
         }
@@ -20,15 +20,15 @@ namespace MathGame.WindowsForm
 
         private void ShowQuestion(Question question)
         {
-            AssignQuestion(question.FirstNumber, lblNum1, pictureBox1);
-            AssignQuestion(question.SecondNumber, lblNum2, pictureBox2);
-            AssignQuestion(question.ThirdNumber, lblNum3, pictureBox3);
+            AssignQuestion(question.FirstNumber, FirstNumber, FirstCard);
+            AssignQuestion(question.SecondNumber, SecondNumber, SecondCard);
+            AssignQuestion(question.ThirdNumber, ThirdNumber, ThirdCard);
         }
 
-        private static void AssignQuestion(int number, Label label, PictureBox picture)
+        private static void AssignQuestion(int number, Label questionNumber, PictureBox card)
         {
-            label.Text = number.ToString();
-            picture.Image = Image.FromFile($"cards/card{number}.jpg");
+            questionNumber.Text = number.ToString();
+            card.Image = Image.FromFile($"cards/card{number}.jpg");
         }
 
         private void SubmitAnswer_Click(object sender, EventArgs e)
@@ -49,7 +49,9 @@ namespace MathGame.WindowsForm
                 AttemptsMade.Text = _game.Attempts.ToString();
                 CorrectlyAnswered.Text = _game.CorrectlyGuessed.ToString();
 
-                ShowQuestion(_game.AskForNewQuestion());
+                var newQuestion = _game.AskForNewQuestion();
+
+                ShowQuestion(newQuestion);
             }
         }
     }

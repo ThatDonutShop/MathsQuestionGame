@@ -32,23 +32,23 @@
             lblAttempts = new Label();
             SubmitAnswer = new Button();
             label5 = new Label();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
+            ThirdCard = new PictureBox();
+            SecondCard = new PictureBox();
+            FirstCard = new PictureBox();
             label4 = new Label();
-            lblNum3 = new Label();
+            ThirdNumber = new Label();
             label3 = new Label();
-            lblNum2 = new Label();
+            SecondNumber = new Label();
             label2 = new Label();
-            lblNum1 = new Label();
+            FirstNumber = new Label();
             label1 = new Label();
             btnGenQuestion = new Button();
             AttemptsMade = new Label();
             CorrectlyAnswered = new Label();
             Guess = new NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ThirdCard).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)SecondCard).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)FirstCard).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Guess).BeginInit();
             SuspendLayout();
             // 
@@ -93,27 +93,27 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.Location = new Point(259, 119);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(100, 140);
-            pictureBox3.TabIndex = 42;
-            pictureBox3.TabStop = false;
+            ThirdCard.Location = new Point(259, 119);
+            ThirdCard.Name = "pictureBox3";
+            ThirdCard.Size = new Size(100, 140);
+            ThirdCard.TabIndex = 42;
+            ThirdCard.TabStop = false;
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(151, 119);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(100, 140);
-            pictureBox2.TabIndex = 41;
-            pictureBox2.TabStop = false;
+            SecondCard.Location = new Point(151, 119);
+            SecondCard.Name = "pictureBox2";
+            SecondCard.Size = new Size(100, 140);
+            SecondCard.TabIndex = 41;
+            SecondCard.TabStop = false;
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(43, 119);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 140);
-            pictureBox1.TabIndex = 40;
-            pictureBox1.TabStop = false;
+            FirstCard.Location = new Point(43, 119);
+            FirstCard.Name = "pictureBox1";
+            FirstCard.Size = new Size(100, 140);
+            FirstCard.TabIndex = 40;
+            FirstCard.TabStop = false;
             // 
             // label4
             // 
@@ -127,13 +127,13 @@
             // 
             // lblNum3
             // 
-            lblNum3.AutoSize = true;
-            lblNum3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblNum3.Location = new Point(279, 91);
-            lblNum3.Name = "lblNum3";
-            lblNum3.Size = new Size(63, 25);
-            lblNum3.TabIndex = 38;
-            lblNum3.Text = "label4";
+            ThirdNumber.AutoSize = true;
+            ThirdNumber.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            ThirdNumber.Location = new Point(279, 91);
+            ThirdNumber.Name = "lblNum3";
+            ThirdNumber.Size = new Size(63, 25);
+            ThirdNumber.TabIndex = 38;
+            ThirdNumber.Text = "label4";
             // 
             // label3
             // 
@@ -147,13 +147,13 @@
             // 
             // lblNum2
             // 
-            lblNum2.AutoSize = true;
-            lblNum2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblNum2.Location = new Point(168, 91);
-            lblNum2.Name = "lblNum2";
-            lblNum2.Size = new Size(63, 25);
-            lblNum2.TabIndex = 36;
-            lblNum2.Text = "label3";
+            SecondNumber.AutoSize = true;
+            SecondNumber.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            SecondNumber.Location = new Point(168, 91);
+            SecondNumber.Name = "lblNum2";
+            SecondNumber.Size = new Size(63, 25);
+            SecondNumber.TabIndex = 36;
+            SecondNumber.Text = "label3";
             // 
             // label2
             // 
@@ -167,13 +167,13 @@
             // 
             // lblNum1
             // 
-            lblNum1.AutoSize = true;
-            lblNum1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblNum1.Location = new Point(67, 91);
-            lblNum1.Name = "lblNum1";
-            lblNum1.Size = new Size(63, 25);
-            lblNum1.TabIndex = 34;
-            lblNum1.Text = "label2";
+            FirstNumber.AutoSize = true;
+            FirstNumber.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            FirstNumber.Location = new Point(67, 91);
+            FirstNumber.Name = "lblNum1";
+            FirstNumber.Size = new Size(63, 25);
+            FirstNumber.TabIndex = 34;
+            FirstNumber.Text = "label2";
             // 
             // label1
             // 
@@ -232,23 +232,23 @@
             Controls.Add(lblAttempts);
             Controls.Add(SubmitAnswer);
             Controls.Add(label5);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
+            Controls.Add(ThirdCard);
+            Controls.Add(SecondCard);
+            Controls.Add(FirstCard);
             Controls.Add(label4);
-            Controls.Add(lblNum3);
+            Controls.Add(ThirdNumber);
             Controls.Add(label3);
-            Controls.Add(lblNum2);
+            Controls.Add(SecondNumber);
             Controls.Add(label2);
-            Controls.Add(lblNum1);
+            Controls.Add(FirstNumber);
             Controls.Add(label1);
             Controls.Add(btnGenQuestion);
             Name = "MathsGameForm";
             Text = "Maths Game";
             Load += LoadGame;
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ThirdCard).EndInit();
+            ((System.ComponentModel.ISupportInitialize)SecondCard).EndInit();
+            ((System.ComponentModel.ISupportInitialize)FirstCard).EndInit();
             ((System.ComponentModel.ISupportInitialize)Guess).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -260,15 +260,15 @@
         private Label lblAttempts;
         private Button SubmitAnswer;
         private Label label5;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox1;
+        private PictureBox ThirdCard;
+        private PictureBox SecondCard;
+        private PictureBox FirstCard;
         private Label label4;
-        private Label lblNum3;
+        private Label ThirdNumber;
         private Label label3;
-        private Label lblNum2;
+        private Label SecondNumber;
         private Label label2;
-        private Label lblNum1;
+        private Label FirstNumber;
         private Label label1;
         private Button btnGenQuestion;
         private Label AttemptsMade;
