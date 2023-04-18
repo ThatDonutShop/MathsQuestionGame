@@ -31,7 +31,6 @@
             lblAnsweredCorrect = new Label();
             lblAttempts = new Label();
             SubmitAnswer = new Button();
-            label5 = new Label();
             ThirdCard = new PictureBox();
             SecondCard = new PictureBox();
             FirstCard = new PictureBox();
@@ -49,7 +48,7 @@
             // lblAnsweredCorrect
             // 
             lblAnsweredCorrect.AutoSize = true;
-            lblAnsweredCorrect.Location = new Point(42, 437);
+            lblAnsweredCorrect.Location = new Point(42, 380);
             lblAnsweredCorrect.Name = "lblAnsweredCorrect";
             lblAnsweredCorrect.Size = new Size(113, 15);
             lblAnsweredCorrect.TabIndex = 47;
@@ -58,7 +57,7 @@
             // lblAttempts
             // 
             lblAttempts.AutoSize = true;
-            lblAttempts.Location = new Point(42, 412);
+            lblAttempts.Location = new Point(42, 355);
             lblAttempts.Name = "lblAttempts";
             lblAttempts.Size = new Size(59, 15);
             lblAttempts.TabIndex = 46;
@@ -67,23 +66,13 @@
             // SubmitAnswer
             // 
             SubmitAnswer.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            SubmitAnswer.Location = new Point(78, 353);
+            SubmitAnswer.Location = new Point(42, 311);
             SubmitAnswer.Name = "SubmitAnswer";
             SubmitAnswer.Size = new Size(173, 31);
             SubmitAnswer.TabIndex = 45;
             SubmitAnswer.Text = "Submit";
             SubmitAnswer.UseVisualStyleBackColor = true;
             SubmitAnswer.Click += SubmitAnswer_Click;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(42, 308);
-            label5.Name = "label5";
-            label5.Size = new Size(209, 30);
-            label5.TabIndex = 43;
-            label5.Text = "What is the Answer: ";
             // 
             // ThirdCard
             // 
@@ -114,7 +103,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.DarkGreen;
-            label1.Location = new Point(12, 24);
+            label1.Location = new Point(133, 45);
             label1.Name = "label1";
             label1.Size = new Size(118, 25);
             label1.TabIndex = 33;
@@ -123,7 +112,7 @@
             // AttemptsMade
             // 
             AttemptsMade.AutoSize = true;
-            AttemptsMade.Location = new Point(107, 410);
+            AttemptsMade.Location = new Point(107, 353);
             AttemptsMade.Name = "AttemptsMade";
             AttemptsMade.Size = new Size(0, 15);
             AttemptsMade.TabIndex = 48;
@@ -131,14 +120,14 @@
             // CorrectlyAnswered
             // 
             CorrectlyAnswered.AutoSize = true;
-            CorrectlyAnswered.Location = new Point(161, 435);
+            CorrectlyAnswered.Location = new Point(172, 380);
             CorrectlyAnswered.Name = "CorrectlyAnswered";
             CorrectlyAnswered.Size = new Size(0, 15);
             CorrectlyAnswered.TabIndex = 49;
             // 
             // Guess
             // 
-            Guess.Location = new Point(247, 315);
+            Guess.Location = new Point(166, 284);
             Guess.Maximum = new decimal(new int[] { 110, 0, 0, 0 });
             Guess.Name = "Guess";
             Guess.Size = new Size(49, 23);
@@ -148,7 +137,7 @@
             // 
             QuestionDescription.AutoSize = true;
             QuestionDescription.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            QuestionDescription.Location = new Point(172, 83);
+            QuestionDescription.Location = new Point(43, 278);
             QuestionDescription.Name = "QuestionDescription";
             QuestionDescription.Size = new Size(0, 30);
             QuestionDescription.TabIndex = 51;
@@ -157,7 +146,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(469, 553);
+            ClientSize = new Size(388, 449);
             Controls.Add(QuestionDescription);
             Controls.Add(Guess);
             Controls.Add(CorrectlyAnswered);
@@ -165,7 +154,6 @@
             Controls.Add(lblAnsweredCorrect);
             Controls.Add(lblAttempts);
             Controls.Add(SubmitAnswer);
-            Controls.Add(label5);
             Controls.Add(ThirdCard);
             Controls.Add(SecondCard);
             Controls.Add(FirstCard);
@@ -186,7 +174,6 @@
         private Label lblAnsweredCorrect;
         private Label lblAttempts;
         private Button SubmitAnswer;
-        private Label label5;
         private PictureBox ThirdCard;
         private PictureBox SecondCard;
         private PictureBox FirstCard;

@@ -26,7 +26,7 @@ public class Question
     {
         get
         {
-            return $"{FirstNumber} + {SecondNumber} * {ThirdNumber} = ?";
+            return $"{FirstNumber} + {SecondNumber} * {ThirdNumber} = ";
         }
     }
 
