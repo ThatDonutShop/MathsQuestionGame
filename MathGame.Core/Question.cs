@@ -9,7 +9,29 @@ public class Question
 
     public int ThirdNumber { get; set; }
 
-    public int Answer => (SecondNumber * ThirdNumber) + FirstNumber;
+    public int Answer
+    {
+        get
+        {
+            return (SecondNumber * ThirdNumber) + FirstNumber;
+        }
+    }
 
-    public bool IsCorrectAnswer(int guess) => Answer == guess;
+    public bool IsCorrectAnswer(int guess)
+    {
+        return Answer == guess;
+    }
+
+    public string Description
+    {
+        get
+        {
+            return $"{FirstNumber} + {SecondNumber} * {ThirdNumber} = ?";
+        }
+    }
+
+    public override string ToString()
+    {
+        return Description;
+    }
 }

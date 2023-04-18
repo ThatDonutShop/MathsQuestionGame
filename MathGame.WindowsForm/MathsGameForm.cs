@@ -1,4 +1,6 @@
 using MathGame.Core;
+using System.Diagnostics;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MathGame.WindowsForm
 {
@@ -20,15 +22,11 @@ namespace MathGame.WindowsForm
 
         private void ShowQuestion(Question question)
         {
-            AssignQuestion(question.FirstNumber, FirstNumber, FirstCard);
-            AssignQuestion(question.SecondNumber, SecondNumber, SecondCard);
-            AssignQuestion(question.ThirdNumber, ThirdNumber, ThirdCard);
-        }
+            QuestionDescription.Text = question.Description;
 
-        private static void AssignQuestion(int number, Label questionNumber, PictureBox card)
-        {
-            questionNumber.Text = number.ToString();
-            card.Image = Image.FromFile($"cards/card{number}.jpg");
+            FirstCard.Image = Image.FromFile($"cards/card{question.FirstNumber}.jpg");
+            SecondCard.Image = Image.FromFile($"cards/card{question.SecondNumber}.jpg");
+            ThirdCard.Image = Image.FromFile($"cards/card{question.ThirdNumber}.jpg");
         }
 
         private void SubmitAnswer_Click(object sender, EventArgs e)

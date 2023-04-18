@@ -35,17 +35,11 @@
             ThirdCard = new PictureBox();
             SecondCard = new PictureBox();
             FirstCard = new PictureBox();
-            label4 = new Label();
-            ThirdNumber = new Label();
-            label3 = new Label();
-            SecondNumber = new Label();
-            label2 = new Label();
-            FirstNumber = new Label();
             label1 = new Label();
-            btnGenQuestion = new Button();
             AttemptsMade = new Label();
             CorrectlyAnswered = new Label();
             Guess = new NumericUpDown();
+            QuestionDescription = new Label();
             ((System.ComponentModel.ISupportInitialize)ThirdCard).BeginInit();
             ((System.ComponentModel.ISupportInitialize)SecondCard).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FirstCard).BeginInit();
@@ -91,89 +85,29 @@
             label5.TabIndex = 43;
             label5.Text = "What is the Answer: ";
             // 
-            // pictureBox3
+            // ThirdCard
             // 
             ThirdCard.Location = new Point(259, 119);
-            ThirdCard.Name = "pictureBox3";
+            ThirdCard.Name = "ThirdCard";
             ThirdCard.Size = new Size(100, 140);
             ThirdCard.TabIndex = 42;
             ThirdCard.TabStop = false;
             // 
-            // pictureBox2
+            // SecondCard
             // 
             SecondCard.Location = new Point(151, 119);
-            SecondCard.Name = "pictureBox2";
+            SecondCard.Name = "SecondCard";
             SecondCard.Size = new Size(100, 140);
             SecondCard.TabIndex = 41;
             SecondCard.TabStop = false;
             // 
-            // pictureBox1
+            // FirstCard
             // 
             FirstCard.Location = new Point(43, 119);
-            FirstCard.Name = "pictureBox1";
+            FirstCard.Name = "FirstCard";
             FirstCard.Size = new Size(100, 140);
             FirstCard.TabIndex = 40;
             FirstCard.TabStop = false;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(357, 91);
-            label4.Name = "label4";
-            label4.Size = new Size(64, 25);
-            label4.TabIndex = 39;
-            label4.Text = "=      ?";
-            // 
-            // lblNum3
-            // 
-            ThirdNumber.AutoSize = true;
-            ThirdNumber.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            ThirdNumber.Location = new Point(279, 91);
-            ThirdNumber.Name = "lblNum3";
-            ThirdNumber.Size = new Size(63, 25);
-            ThirdNumber.TabIndex = 38;
-            ThirdNumber.Text = "label4";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(247, 91);
-            label3.Name = "label3";
-            label3.Size = new Size(21, 25);
-            label3.TabIndex = 37;
-            label3.Text = "x";
-            // 
-            // lblNum2
-            // 
-            SecondNumber.AutoSize = true;
-            SecondNumber.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            SecondNumber.Location = new Point(168, 91);
-            SecondNumber.Name = "lblNum2";
-            SecondNumber.Size = new Size(63, 25);
-            SecondNumber.TabIndex = 36;
-            SecondNumber.Text = "label3";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(135, 91);
-            label2.Name = "label2";
-            label2.Size = new Size(25, 25);
-            label2.TabIndex = 35;
-            label2.Text = "+";
-            // 
-            // lblNum1
-            // 
-            FirstNumber.AutoSize = true;
-            FirstNumber.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            FirstNumber.Location = new Point(67, 91);
-            FirstNumber.Name = "lblNum1";
-            FirstNumber.Size = new Size(63, 25);
-            FirstNumber.TabIndex = 34;
-            FirstNumber.Text = "label2";
             // 
             // label1
             // 
@@ -185,16 +119,6 @@
             label1.Size = new Size(118, 25);
             label1.TabIndex = 33;
             label1.Text = "Maths Game";
-            // 
-            // btnGenQuestion
-            // 
-            btnGenQuestion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnGenQuestion.Location = new Point(77, 88);
-            btnGenQuestion.Name = "btnGenQuestion";
-            btnGenQuestion.Size = new Size(0, 0);
-            btnGenQuestion.TabIndex = 32;
-            btnGenQuestion.Text = "Generate New Question";
-            btnGenQuestion.UseVisualStyleBackColor = true;
             // 
             // AttemptsMade
             // 
@@ -220,11 +144,21 @@
             Guess.Size = new Size(49, 23);
             Guess.TabIndex = 50;
             // 
+            // QuestionDescription
+            // 
+            QuestionDescription.AutoSize = true;
+            QuestionDescription.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            QuestionDescription.Location = new Point(172, 83);
+            QuestionDescription.Name = "QuestionDescription";
+            QuestionDescription.Size = new Size(0, 30);
+            QuestionDescription.TabIndex = 51;
+            // 
             // MathsGameForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(469, 553);
+            Controls.Add(QuestionDescription);
             Controls.Add(Guess);
             Controls.Add(CorrectlyAnswered);
             Controls.Add(AttemptsMade);
@@ -235,14 +169,7 @@
             Controls.Add(ThirdCard);
             Controls.Add(SecondCard);
             Controls.Add(FirstCard);
-            Controls.Add(label4);
-            Controls.Add(ThirdNumber);
-            Controls.Add(label3);
-            Controls.Add(SecondNumber);
-            Controls.Add(label2);
-            Controls.Add(FirstNumber);
             Controls.Add(label1);
-            Controls.Add(btnGenQuestion);
             Name = "MathsGameForm";
             Text = "Maths Game";
             Load += LoadGame;
@@ -263,16 +190,10 @@
         private PictureBox ThirdCard;
         private PictureBox SecondCard;
         private PictureBox FirstCard;
-        private Label label4;
-        private Label ThirdNumber;
-        private Label label3;
-        private Label SecondNumber;
-        private Label label2;
-        private Label FirstNumber;
         private Label label1;
-        private Button btnGenQuestion;
         private Label AttemptsMade;
         private Label CorrectlyAnswered;
         private NumericUpDown Guess;
+        private Label QuestionDescription;
     }
 }
