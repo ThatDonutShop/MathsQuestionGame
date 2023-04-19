@@ -1,6 +1,4 @@
 using MathGame.Core;
-using System.Diagnostics;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MathGame.WindowsForm
 {
@@ -15,15 +13,20 @@ namespace MathGame.WindowsForm
             Guess.Text = string.Empty;
         }
 
+        /// <summary>
+        /// Loads the game with a brand new question.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoadGame(object sender, EventArgs e)
-        {
+        
             ShowQuestion(_game.AskForNewQuestion());
         }
 
         /// <summary>
         /// Shows the question on the form.
         /// </summary>
-        /// <param name="question">The random <see cref="Question"/> to show.</param>
+        /// <param name="question">The random question to show.</param>
         private void ShowQuestion(Question question)
         {
             QuestionDescription.Text = question.Description;
