@@ -20,6 +20,10 @@ namespace MathGame.WindowsForm
             ShowQuestion(_game.AskForNewQuestion());
         }
 
+        /// <summary>
+        /// Shows the question on the form.
+        /// </summary>
+        /// <param name="question">The random <see cref="Question"/> to show.</param>
         private void ShowQuestion(Question question)
         {
             QuestionDescription.Text = question.Description;
@@ -29,6 +33,15 @@ namespace MathGame.WindowsForm
             ThirdCard.Image = Image.FromFile($"cards/card{question.ThirdNumber}.jpg");
         }
 
+        /// <summary>
+        /// Submit the users guess for the answer to the question.
+        /// If the guess is correct, we display a message box to inform the user that it was correct.
+        /// The number of attempts is increased each time we guess is made.
+        /// If the guess is correct we increase the total count of correctly answered questions.
+        /// Regardless (correct or not) we present a new question.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SubmitAnswer_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(Guess.Text))
