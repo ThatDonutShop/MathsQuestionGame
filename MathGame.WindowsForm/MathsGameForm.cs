@@ -20,8 +20,6 @@ namespace MathGame.WindowsForm
         /// <param name="e"></param>
         private void LoadGame(object sender, EventArgs e)
         
-            a
-            dfdsfsdfsd
             ShowQuestion(_game.AskForNewQuestion());
         }
 
