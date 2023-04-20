@@ -39,6 +39,8 @@
             CorrectlyAnswered = new Label();
             Guess = new NumericUpDown();
             QuestionDescription = new Label();
+            label2 = new Label();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)ThirdCard).BeginInit();
             ((System.ComponentModel.ISupportInitialize)SecondCard).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FirstCard).BeginInit();
@@ -76,7 +78,7 @@
             // 
             // ThirdCard
             // 
-            ThirdCard.Location = new Point(259, 119);
+            ThirdCard.Location = new Point(291, 119);
             ThirdCard.Name = "ThirdCard";
             ThirdCard.Size = new Size(100, 140);
             ThirdCard.TabIndex = 42;
@@ -84,7 +86,7 @@
             // 
             // SecondCard
             // 
-            SecondCard.Location = new Point(151, 119);
+            SecondCard.Location = new Point(152, 119);
             SecondCard.Name = "SecondCard";
             SecondCard.Size = new Size(100, 140);
             SecondCard.TabIndex = 41;
@@ -92,7 +94,7 @@
             // 
             // FirstCard
             // 
-            FirstCard.Location = new Point(43, 119);
+            FirstCard.Location = new Point(8, 119);
             FirstCard.Name = "FirstCard";
             FirstCard.Size = new Size(100, 140);
             FirstCard.TabIndex = 40;
@@ -142,11 +144,33 @@
             QuestionDescription.Size = new Size(0, 30);
             QuestionDescription.TabIndex = 51;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(113, 186);
+            label2.Name = "label2";
+            label2.Size = new Size(35, 37);
+            label2.TabIndex = 52;
+            label2.Text = "+";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(258, 184);
+            label3.Name = "label3";
+            label3.Size = new Size(29, 37);
+            label3.TabIndex = 53;
+            label3.Text = "x";
+            // 
             // MathsGameForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(388, 449);
+            ClientSize = new Size(415, 449);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(QuestionDescription);
             Controls.Add(Guess);
             Controls.Add(CorrectlyAnswered);
@@ -182,5 +206,7 @@
         private Label CorrectlyAnswered;
         private NumericUpDown Guess;
         private Label QuestionDescription;
+        private Label label2;
+        private Label label3;
     }
 }

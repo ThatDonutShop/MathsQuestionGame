@@ -58,7 +58,7 @@ namespace MathGame.WindowsForm
                     MessageBox.Show("You answered that correctly.", "Question answered");
                 }
 
-                Guess.Value = Guess.Minimum; 
+                Guess.Value = Guess.Minimum;
                 Guess.Text = string.Empty;
                 AttemptsMade.Text = _game.Attempts.ToString();
                 CorrectlyAnswered.Text = _game.CorrectlyGuessed.ToString();
