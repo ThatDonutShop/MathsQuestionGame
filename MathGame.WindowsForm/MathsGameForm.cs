@@ -29,7 +29,7 @@ namespace MathGame.WindowsForm
         /// <param name="question">The random question to show.</param>
         private void ShowQuestion(Question question)
         {
-            QuestionDescription.Text = question.Description;
+            QuestionDescription.Text = question.ToString();
 
             FirstCard.Image = Image.FromFile($"cards/card{question.FirstNumber}.jpg");
             SecondCard.Image = Image.FromFile($"cards/card{question.SecondNumber}.jpg");

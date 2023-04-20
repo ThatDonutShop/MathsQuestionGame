@@ -19,6 +19,7 @@ public class Question
             return (SecondNumber * ThirdNumber) + FirstNumber;
         }
     }
+
     /// <summary>
     /// Checks if the answer is correct
     /// </summary>
@@ -28,6 +29,7 @@ public class Question
     {
         return Answer == guess;
     }
+
     /// <summary>
     /// Combines the randomly generated numbers into a easir to read format
     /// </summary>
