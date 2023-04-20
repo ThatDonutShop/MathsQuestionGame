@@ -18,8 +18,8 @@ namespace MathGame.WindowsForm
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void LoadGame(object sender, EventArgs e)
-        { 
+        private void MathsGameForm_Load(object sender, EventArgs e)
+        {
             ShowQuestion(_game.AskForNewQuestion());
         }
 
@@ -68,5 +68,7 @@ namespace MathGame.WindowsForm
                 ShowQuestion(newQuestion);
             }
         }
+
+
     }
 }

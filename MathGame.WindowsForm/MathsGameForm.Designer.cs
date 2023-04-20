@@ -127,7 +127,7 @@
             // 
             // Guess
             // 
-            Guess.Location = new Point(166, 282);
+            Guess.Location = new Point(177, 283);
             Guess.Maximum = new decimal(new int[] { 110, 0, 0, 0 });
             Guess.Name = "Guess";
             Guess.Size = new Size(49, 23);
@@ -160,7 +160,7 @@
             Controls.Add(label1);
             Name = "MathsGameForm";
             Text = "Maths Game";
-            Load += LoadGame;
+            Load += MathsGameForm_Load;
             ((System.ComponentModel.ISupportInitialize)ThirdCard).EndInit();
             ((System.ComponentModel.ISupportInitialize)SecondCard).EndInit();
             ((System.ComponentModel.ISupportInitialize)FirstCard).EndInit();
