@@ -13,6 +13,12 @@ public class Game
     
     public int CorrectlyGuessed { get; private set; } = 0;
     
+    /// <summary>
+    /// Makes the attempts go up by one each guess
+    /// if the answer is correct itll increase correctly answered by 1
+    /// </summary>
+    /// <param name="guess"></param>
+    /// <returns></returns>
     public bool AttemptGuess(int guess)
     {
         Attempts++;
@@ -32,7 +38,10 @@ public class Game
         _question = CreateNewQuestion();
         return _question;
     }
-
+    /// <summary>
+    /// Generates the random numbers for the question between 1 and 10 inclusive
+    /// </summary>
+    /// <returns></returns>
     private static Question CreateNewQuestion()
     {
         var random = new Random();
